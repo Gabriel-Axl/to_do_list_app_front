@@ -1,5 +1,5 @@
 # TO-DO
-## Tela de listagem das tarefas
+## 1. Tela de listagem das tarefas
 ![](./to_do_app_front/src/assets/layout/images/tela1.png)
-## Tela de cadastro das tarefas
+## 2. Tela de cadastro das tarefas
 ![](./to_do_app_front/src/assets/layout/images/tela2.png)
