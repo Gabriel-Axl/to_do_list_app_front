@@ -4,8 +4,8 @@
     <p-table [value]="tarefas" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">
             <tr>
-                <th>Id</th>
                 <th>Tarefa</th>
+                <th>Descrição</th>
                 <th>Data de criação</th>
                 <th>Data de conclusão</th>
                 <th>Editar</th>
@@ -14,8 +14,8 @@
         </ng-template>
         <ng-template pTemplate="body" let-tarefas>
             <tr>
-                <td>{{ tarefas.id }}</td>
                 <td>{{ tarefas.titulo }}</td>
+                <td>{{ tarefas.descricao }}</td>
                 <td>{{ tarefas.dataInicio }}</td>
                 <td>{{ tarefas.dataConclusao }}</td>
                 <td><p-button label="Editar" severity="info" /></td>

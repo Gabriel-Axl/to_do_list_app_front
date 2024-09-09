@@ -28,7 +28,8 @@ export class HomeComponent implements OnInit {
           id: tarefa.id,
           titulo: tarefa.titulo,
           dataInicio: this.formatarData(tarefa.data_criacao),
-          dataConclusao: this.formatarData(tarefa.data_conclusao)
+          dataConclusao: this.formatarData(tarefa.data_conclusao),
+          descricao: tarefa.descricao
         }
         this.tarefas.push(novaTarefa);
       }

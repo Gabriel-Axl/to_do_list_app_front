@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -15,5 +15,9 @@ export class ApiService {
   }
   deletarTarefa(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`);
+  }
+  salvarTarefa(tarefa: any): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post(this.baseUrl, tarefa, { headers });
   }
 }

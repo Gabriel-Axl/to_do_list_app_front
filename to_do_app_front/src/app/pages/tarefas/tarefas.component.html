@@ -1,1 +1,19 @@
-<p>tarefas works!</p>
+<p-card header="Adicionar nova tarefa" class="p-mt-2" [style]="{ width: '18rem', overflow: 'hidden' }">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+        <p-floatLabel>
+            <input id="tarefa" type="text" pInputText [(ngModel)]="titulo" />
+            <label for="tarefa">Titulo</label>
+        </p-floatLabel>
+        <p-floatLabel>
+            <input id="desc" type="text" pInputText [(ngModel)]="descricao" />
+            <label for="tarefa">Descrição</label>
+        </p-floatLabel>
+        <div style="display: flex;flex-direction:column;gap:4px">
+            <label for="data">Data de conclusão</label>
+            <input id="data" type="datetime-local" value="" pInputText [(ngModel)]="dataDiaMes" />
+        </div>
+        <div class="btn">
+            <p-button label="Submit" icon="pi pi-check" (onClick)="salvarTarefa()" />
+        </div>
+    </div>
+</p-card>
